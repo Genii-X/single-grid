@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap" rel="stylesheet">  
+  <!-- Google fonts Links   -->
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+      font-size: 1em;
+      font-family: 'Karla', sans-serif;
+      background-color: hsl(218, 22%, 67%);
+      color: hsl(204, 43%, 93%);
+      font-weight: 400;
+    }
+    .grid-container{
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      min-height: 100vh;
+      padding: 30px;
+    }
+    .grid-item{
+      padding: 20px;
+    }
+    #first{
+      background-color: hsl(204, 43%, 93%);
+      color: hsl(218, 22%, 67%);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    #second{
+      background-color: hsl(179, 62%, 43%);
+    }
+    #third{
+      background-color: hsla(179, 62%, 43%, 0.7);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    h3{
+      font-weight: 700;
+    }
+    #first h3{
+      color: hsl(179, 62%, 43%);
+    }
+    #first h4{
+      color: hsl(71, 73%, 54%);
+    }
+    #first p{
+      line-height: 1.5;
+      font-size: 0.9em;
+    }
+    #second .content{
+      font-size: 2em;
+    }
+    #second .large-text{
+      display: inline-block;
+      margin: 0px 8px 6px 0px;
+      font-weight: 700;
+    }
+    #second .small-text{
+      font-size: 12px;
+      vertical-align: middle;
+      font-weight: 200;
+    }
+    /* Sign Up Button */
+    #second a{
+      text-decoration: none;
+      color: inherit;
+      background-color: hsl(71, 73%, 54%);
+      width: 100%;
+      display: block;
+      text-align: center;
+      padding: 12px;
+      margin-top: 25px;
+      box-shadow: -2px 4px 200px 4px black; 
+      border-radius: 5px;
+    }
+    
+    #third p{
+      font-size: 0.75em;
+      line-height: 1.5;
+      font-weight: 200;  
+    }
+    /* Media Queries */
+    @media (min-width: 650px){
+      .grid-container{
+        grid-template-columns: 320px 320px;
+      }
+      #first{
+        grid-column-end: span 2;
+      }
+      #first .block-text{
+        display: inline-block;
+      }
+      #second{
+        border-bottom-left-radius: 10px;
+      }
+      #third{
+        border-bottom-left-radius: 0;
+      }
+          /* Sign Up Button Hover styles */
+      #second a:hover{
+        background-color: hsl(204, 43%, 93%);
+        color: hsl(179, 62%, 43%);
+      }
+    }
+    .attribution { 
+      font-size: 14px; 
+      text-align: center; 
+    }
+    .attribution a { 
+      color: hsl(71, 73%, 54%); 
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="grid-container">
+     <div class="grid-item" id="first">
+      <h3>Join our community</h3>
+
+      <h4>30-day, hassle-free money back guarantee</h4>
+    
+      <p>Gain access to our full library of tutorials along with expert code reviews. 
+        <span class="block-text">Perfect for any developers who are serious about honing their skills.</span></p>
+     </div>
+
+     <div class="grid-item" id="second">
+      <h3>Monthly Subscription</h3>
+
+      <p>
+        <span class="content"><span class="large-text">&dollar;29</span><span class="small-text"> per month</span></span><br>
+
+        Full access for less than &dollar;1 a day<br>
+  
+        <a href="#">Sign Up</a>
+      </p>
+
+     </div>
+     
+     <div class="grid-item" id="third">
+      <h3>Why Us</h3>
+
+      <p>
+        Tutorials by industry experts<br>
+        Peer &amp; expert code review<br>
+        Coding exercises<br>
+        Access to our GitHub repos<br>
+        Community forum<br>
+        Flashcard decks<br>
+        New videos every week<br>
+      </p>
+     </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/Genii-X">Genii</a>.
+    </p>
+  </footer>
+</body>
+</html>
